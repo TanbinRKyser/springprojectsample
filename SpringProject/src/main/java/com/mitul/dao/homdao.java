@@ -22,4 +22,8 @@ public class homdao {
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(logininfo.class);
         return criteria.list();
     }
+
+    public int insertPost(logininfo log){
+        return (int) sessionFactory.getCurrentSession().save(log);
+    }
 }
